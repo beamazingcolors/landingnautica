@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nautica Residences by Naúma | Cancún — Life · Abundance · Inspire</title>
-  <meta name="description" content="Nautica Residences by Naúma en Cancún. Dos torres de 20 pisos frente a Laguna Nichupté, más de 50 amenidades 5 estrellas, Beach Club en Costa Mujeres y residencias desde $6,709,445 MXN." />
+  <meta name="description" content="Nautica Residences by Naúma en Cancún. Dos torres de 20 pisos frente a Laguna Nichupté, maqueta 3D interactiva, más de 50 amenidades 5 estrellas, Beach Club en Costa Mujeres y unidades desde $6,709,445 MXN." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -59,7 +59,7 @@
     }
     img { max-width: 100%; display: block; }
     a { color: inherit; text-decoration: none; }
-    .container { width: min(1220px, 90%); margin: 0 auto; }
+    .container { width: min(1240px, 90%); margin: 0 auto; }
 
     /* Barra de lectura */
     .scroll-bar {
@@ -78,7 +78,7 @@
     .eyebrow--light { color: var(--sand-mid); }
     .eyebrow--light::before { background: var(--sand-mid); }
 
-    /* Botones compactos y arquitectónicos (inspirados en Brandbook p. 13) */
+    /* Botones compactos y arquitectónicos (Brandbook p. 13) */
     .btn {
       display: inline-flex; align-items: center; justify-content: center; gap: 8px;
       padding: 9px 20px; border-radius: 999px;
@@ -241,13 +241,13 @@
     section { padding: 92px 0; position: relative; }
     .sec-navy { background: var(--navy-primary); color: var(--white-primary); }
     .sec-white { background: var(--white-primary); color: var(--navy-primary); }
-    .sec-head { max-width: 720px; margin-bottom: 44px; }
+    .sec-head { max-width: 740px; margin-bottom: 44px; }
     .sec-head h2 { font-size: clamp(1.75rem, 3.1vw, 2.55rem); line-height: 1.18; margin: 12px 0 14px; }
     .sec-head p { font-size: 0.98rem; font-weight: 300; opacity: 0.84; }
 
-    /* MAQUETA 3D INTERACTIVA + RECORRIDO EN VIDEO POR NIVEL */
+    /* MAQUETA 3D OFICIAL HAUZD (https://nautica.hauzd.app/) + VOLUMETRÍA & NIVELES */
     .maqueta-grid {
-      display: grid; grid-template-columns: 1.38fr 0.62fr; gap: 24px; align-items: stretch;
+      display: grid; grid-template-columns: 1.48fr 0.52fr; gap: 22px; align-items: stretch;
     }
     .stage-card {
       border-radius: 16px; border: 1px solid rgba(255, 255, 255, 0.16);
@@ -258,7 +258,7 @@
       display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
       gap: 10px; padding: 14px 20px; border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
-    .tab-group { display: inline-flex; gap: 6px; }
+    .tab-group { display: inline-flex; flex-wrap: wrap; gap: 6px; }
     .chip-btn {
       padding: 6px 14px; border-radius: 999px;
       border: 1px solid rgba(255, 255, 255, 0.22); background: transparent;
@@ -270,69 +270,11 @@
       background: var(--white-primary); color: var(--navy-primary); border-color: var(--white-primary);
     }
     .stage-viewport {
-      position: relative; aspect-ratio: 16 / 9; min-height: 390px;
+      position: relative; min-height: 540px; flex: 1;
       background: radial-gradient(circle at 50% 40%, rgba(45, 65, 116, 0.45), var(--navy-primary));
       overflow: hidden;
     }
     .stage-viewport iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
-
-    /* Escena Maqueta 3D Interactiva CSS/SVG */
-    .model3d-wrap {
-      position: absolute; inset: 0; display: flex; flex-direction: column;
-      align-items: center; justify-content: center; user-select: none;
-      perspective: 1100px; cursor: grab;
-    }
-    .model3d-wrap:active { cursor: grabbing; }
-    .model3d-scene {
-      width: 340px; height: 250px; position: relative;
-      transform-style: preserve-3d;
-      transform: rotateX(60deg) rotateZ(-32deg);
-      transition: transform 0.15s ease-out;
-    }
-    .m-base {
-      position: absolute; inset: -10px; border-radius: 16px;
-      background: linear-gradient(135deg, rgba(45, 65, 116, 0.9), rgba(12, 35, 64, 0.96));
-      border: 1px solid rgba(208, 216, 237, 0.38);
-      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.55);
-    }
-    .m-lagoon {
-      position: absolute; left: 12px; right: 12px; bottom: 10px; height: 44px;
-      border-radius: 10px; background: linear-gradient(90deg, rgba(84, 105, 156, 0.55), rgba(208, 216, 237, 0.35));
-      border: 1px solid rgba(208, 216, 237, 0.4);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 0.58rem; letter-spacing: 0.22em; color: var(--ice-blue); text-transform: uppercase;
-    }
-    .m-tower {
-      position: absolute; width: 108px; bottom: 72px;
-      transform-style: preserve-3d;
-    }
-    .m-tower.t-a { left: 42px; }
-    .m-tower.t-b { right: 42px; }
-    .m-slab {
-      height: 15px; margin-bottom: 3px; border-radius: 4px;
-      background: linear-gradient(90deg, rgba(255,255,255,0.88), rgba(208,216,237,0.68));
-      border: 1px solid rgba(255, 255, 255, 0.95);
-      box-shadow: 0 4px 12px rgba(12, 35, 64, 0.35);
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 0 8px; font-size: 0.56rem; font-weight: 700; color: var(--navy-primary);
-      cursor: pointer; transition: all 0.25s var(--ease);
-      transform: translateZ(var(--z, 10px));
-    }
-    .m-slab:hover, .m-slab.active {
-      background: var(--sand-dark); color: var(--white-primary);
-      border-color: var(--white-primary); transform: translateZ(calc(var(--z, 10px) + 6px)) scale(1.05);
-    }
-    .m-controls-hint {
-      position: absolute; bottom: 14px; left: 18px; right: 18px;
-      display: flex; justify-content: space-between; align-items: center;
-      font-size: 0.72rem; color: var(--ice-blue); pointer-events: none;
-    }
-    .rot-btns { display: inline-flex; gap: 6px; pointer-events: auto; }
-    .rot-btn {
-      padding: 4px 10px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.25);
-      background: rgba(12, 35, 64, 0.75); color: var(--white-primary);
-      font-size: 0.66rem; cursor: pointer;
-    }
     .stage-foot {
       display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
       gap: 12px; padding: 13px 20px; border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -399,7 +341,7 @@
     .conn-box span { font-size: 0.84rem; font-weight: 600; color: var(--navy-mid); display: block; margin: 3px 0; }
     .conn-box small { font-size: 0.76rem; color: var(--slate-mid); }
 
-    /* TIPOLOGÍAS EN MXN */
+    /* TIPOLOGÍAS EN MXN (Cifras exactas de 3. INVENTARIO) */
     .filter-bar { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
     .units-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
     .unit-card {
@@ -480,7 +422,7 @@
     }
     .sim-total-box strong { font-family: var(--font-display); font-size: 1.38rem; }
 
-    /* VIDEOS (Vimeo CDN + HTML5 Video Nativo para compatibilidad 100% en GitHub Pages) */
+    /* VIDEOS */
     .cinema-grid { display: grid; grid-template-columns: 1.38fr 0.62fr; gap: 24px; }
     .video-box {
       position: relative; aspect-ratio: 16 / 9; border-radius: 14px; overflow: hidden;
@@ -532,7 +474,7 @@
       font-size: 0.74rem; font-weight: 600; color: var(--navy-primary);
     }
 
-    /* ASESORÍA DIRECTA & FORMULARIO (Estético, botones compactos y proporcionados) */
+    /* ASESORÍA DIRECTA & FORMULARIO */
     .contact-split { display: grid; grid-template-columns: 0.92fr 1.08fr; gap: 48px; align-items: start; }
     .concierge-panel {
       padding: 34px; border-radius: 16px;
@@ -646,6 +588,7 @@
       .hero-ledger, .units-grid, .v-tabs, .scheme-cards, .form-grid { grid-template-columns: 1fr; }
       .field.full { grid-column: span 1; }
       .conn-strip { grid-template-columns: 1fr; }
+      .stage-viewport { min-height: 440px; }
     }
   </style>
 </head>
@@ -704,66 +647,75 @@
     <img class="nauma-corner" src="https://nauticaresidencescancun.com/wp-content/uploads/sites/14/2024/11/byNauma.png" alt="by NAÚMA" />
   </section>
 
-  <!-- MAQUETA 3D INTERACTIVA Y RECORRIDO EN VIDEO POR NIVEL -->
+  <!-- MAQUETA 3D OFICIAL (https://nautica.hauzd.app/) + VISTAS REALES CON DRON 180° POR NIVEL -->
   <section class="sec-navy" id="maqueta3d" style="border-top: 1px solid rgba(255,255,255,0.1);">
     <div class="container">
       <div class="sec-head" data-reveal>
-        <span class="eyebrow eyebrow--light" data-i18n="m3d_eyebrow">Maqueta Interactiva 3D y Elevación Real</span>
-        <h2 data-i18n="m3d_title">Explora la volumetría en 3D y los recorridos por nivel.</h2>
-        <p data-i18n="m3d_sub">Gira la maqueta arquitectónica 3D de Torres A y B o selecciona cualquier nivel para reproducir su recorrido audiovisual.</p>
+        <span class="eyebrow eyebrow--light" data-i18n="m3d_eyebrow">Experiencia Interactiva 3D en Tiempo Real</span>
+        <h2 data-i18n="m3d_title">Explora la maqueta 3D oficial, unidades y vistas por nivel.</h2>
+        <p data-i18n="m3d_sub">Navega libremente las Torres A y B en el modelo 3D interactivo oficial o selecciona un nivel para ver su vista real con dron 180°.</p>
       </div>
 
       <div class="maqueta-grid" data-reveal>
         <div class="stage-card">
           <div class="stage-bar">
             <div class="tab-group">
-              <button type="button" class="chip-btn active" id="tab3dModel" data-i18n="tab_3d">Maqueta 3D Interactiva</button>
-              <button type="button" class="chip-btn" id="tabDroneView" data-i18n="tab_drone">Recorrido en Video por Nivel</button>
+              <button type="button" class="chip-btn active" id="tabHauzd3d" data-i18n="tab_hauzd">Maqueta 3D Oficial</button>
             </div>
-            <span id="stageTag" style="font-size: 0.68rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--sand-mid);">MAQUETA 3D · 77 M</span>
+            <div style="display:flex;align-items:center;gap:10px;">
+              <span id="stageTag" style="font-size: 0.66rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--sand-mid);">MAQUETA 3D · HAUZD</span>
+              <a href="https://nautica.hauzd.app/" target="_blank" rel="noopener" class="chip-btn" style="padding:4px 11px;font-size:0.62rem;" data-i18n="btn_full3d">Pantalla Completa ↗</a>
+            </div>
           </div>
 
-          <div class="stage-viewport" id="stageViewport"></div>
+          <div class="stage-viewport" id="stageViewport">
+            <iframe
+              src="https://nautica.hauzd.app/"
+              title="Maqueta 3D Oficial Nautica Residences Cancún"
+              allow="autoplay; fullscreen; xr-spatial-tracking; accelerometer; gyroscope"
+              allowfullscreen>
+            </iframe>
+          </div>
 
           <div class="stage-foot">
-            <span id="stageCaption" data-i18n="cap_default">Haz clic en cualquier nivel de la maqueta o arrastra para rotar las Torres A y B.</span>
+            <span id="stageCaption" data-i18n="cap_default">Interactúa directamente con la maqueta 3D oficial: gira 360°, acerca y explora las Torres A y B.</span>
             <a href="#contacto" class="btn btn-sand" data-i18n="m3d_btn">Agendar Presentación</a>
           </div>
         </div>
 
         <aside class="level-box">
           <div>
-            <span class="eyebrow eyebrow--light" data-i18n="lvl_eyebrow">Cota de Altura Real</span>
-            <h3 style="font-size: 1.15rem; margin-top: 6px;" data-i18n="lvl_title">Selecciona un nivel</h3>
+            <span class="eyebrow eyebrow--light" data-i18n="lvl_eyebrow">Cota de Altura e Inventario</span>
+            <h3 style="font-size: 1.15rem; margin-top: 6px;" data-i18n="lvl_title">Explora por nivel</h3>
             <div class="level-stack" id="levelStack">
-              <button type="button" class="lvl-item active" data-idx="0" data-src="https://player.vimeo.com/video/1187441479?dnt=1&autoplay=1&loop=1&title=0&byline=0&portrait=0" data-tag="ROOFTOP · 77 M" data-es="Rooftop a 77 m: Sky Lounge, Infinity Pool y vista 360° Mar Caribe y Laguna." data-en="77m Rooftop: Sky Lounge, Infinity Pool & 360° Caribbean and Lagoon view.">
-                <div><strong data-i18n="l_roof">Rooftop Sky Lounge</strong><small data-i18n="l_roof_s">Infinity Pool · Vista 360°</small></div>
+              <button type="button" class="lvl-item" data-idx="0" data-src="https://drive.google.com/file/d/1sEe0OGnvrRdGGxGwSu4jG4Dyk3ewWfBk/preview" data-tag="DRON 180° · ROOFTOP 77 M" data-es="Vista real con dron 180° a 77 m (Rooftop Sky Lounge & Infinity Pool): panorama 360° Mar Caribe y Laguna." data-en="Real 180° drone view at 77m (Rooftop Sky Lounge & Infinity Pool): 360° Caribbean Sea and Lagoon panorama.">
+                <div><strong data-i18n="l_roof">Rooftop Sky Lounge</strong><small data-i18n="l_roof_s">Infinity Pool · Vista Dron 180°</small></div>
                 <span class="lvl-m">77 m</span>
               </button>
-              <button type="button" class="lvl-item" data-idx="1" data-src="https://player.vimeo.com/video/1163359565?dnt=1&autoplay=1&title=0&byline=0&portrait=0" data-tag="NIVEL 16 · 71 M" data-es="Nivel 16 a 71 m: Residencias altas y Pent-House desde $9,360,000 MXN." data-en="Level 16 at 71m: High-floor residences & Pent-House from $9,360,000 MXN.">
-                <div><strong data-i18n="l_16">Nivel 16 · Residencias Altas</strong><small data-i18n="l_16_s">180° Laguna Sur y Norte</small></div>
+              <button type="button" class="lvl-item" data-idx="1" data-src="https://drive.google.com/file/d/1VvjgWXRf92qcyHDlHybTWWFuON3cbS1S/preview" data-tag="DRON 180° · NIVEL 16 · 71 M" data-es="Vista real con dron 180° a 71 m (Niveles 14–17): PH Small ($7,470,750 MXN), Medium ($11,902,800 MXN), Sky View ($21,537,600 MXN) y Pent-House ($27,303,150 MXN)." data-en="Real 180° drone view at 71m (Levels 14–17): PH Small ($7,470,750 MXN), Medium ($11,902,800 MXN), Sky View ($21,537,600 MXN) & Pent-House ($27,303,150 MXN).">
+                <div><strong data-i18n="l_16">Niveles 14–17 · PH & Sky View</strong><small data-i18n="l_16_s">Desde $7,470,750 a $27,303,150 MXN</small></div>
                 <span class="lvl-m">71 m</span>
               </button>
-              <button type="button" class="lvl-item" data-idx="2" data-src="https://player.vimeo.com/video/1187444072?dnt=1&autoplay=1&loop=1&title=0&byline=0&portrait=0" data-tag="NIVEL 12 · 56.5 M" data-es="Nivel 12 a 56.5 m: Prototipos Small, Medium y Large con vista panorámica." data-en="Level 12 at 56.5m: Small, Medium & Large prototypes with panoramic view.">
-                <div><strong data-i18n="l_12">Nivel 12 · Media-Alta</strong><small data-i18n="l_12_s">180° Laguna Nichupté</small></div>
+              <button type="button" class="lvl-item" data-idx="2" data-src="https://drive.google.com/file/d/1NxGlUyXtkxjGUksks-EAdfOQ1MJMaD_G/preview" data-tag="DRON 180° · NIVEL 12 · 56.5 M" data-es="Vista real con dron 180° a 56.5 m (Niveles 10–13): Small desde $6,865,975 MXN, Medium desde $10,425,719 MXN, Large desde $10,475,910 MXN y Sky View desde $19,794,080 MXN." data-en="Real 180° drone view at 56.5m (Levels 10–13): Small from $6,865,975 MXN, Medium from $10,425,719 MXN, Large from $10,475,910 MXN & Sky View from $19,794,080 MXN.">
+                <div><strong data-i18n="l_12">Niveles 10–13 · Media-Alta</strong><small data-i18n="l_12_s">Desde $6,865,975 MXN</small></div>
                 <span class="lvl-m">56.5 m</span>
               </button>
-              <button type="button" class="lvl-item" data-idx="3" data-src="https://player.vimeo.com/video/1187444690?dnt=1&autoplay=1&loop=1&title=0&byline=0&portrait=0" data-tag="NIVEL 8 · 42 M" data-es="Nivel 8 a 42 m: Departamentos desde $6,709,445 MXN frente al corredor natural." data-en="Level 8 at 42m: Residences from $6,709,445 MXN overlooking the reserve.">
-                <div><strong data-i18n="l_8">Nivel 8 · Residencias</strong><small data-i18n="l_8_s">180° Manglar y Laguna</small></div>
+              <button type="button" class="lvl-item" data-idx="3" data-src="https://drive.google.com/file/d/13G_2iiAtJclGZetgqaAbRkxWI7_ADhXO/preview" data-tag="DRON 180° · NIVEL 8 · 42 M" data-es="Vista real con dron 180° a 42 m (Niveles 6–9): Small desde $6,759,250 MXN, Ocean Front desde $8,425,521 MXN, Medium desde $10,179,728 MXN y Large desde $10,200,400 MXN." data-en="Real 180° drone view at 42m (Levels 6–9): Small from $6,759,250 MXN, Ocean Front from $8,425,521 MXN, Medium from $10,179,728 MXN & Large from $10,200,400 MXN.">
+                <div><strong data-i18n="l_8">Niveles 6–9 · Residencias</strong><small data-i18n="l_8_s">Desde $6,759,250 MXN</small></div>
                 <span class="lvl-m">42 m</span>
               </button>
-              <button type="button" class="lvl-item" data-idx="4" data-src="https://player.vimeo.com/video/1204731382?dnt=1&autoplay=1&title=0&byline=0&portrait=0" data-tag="NIVEL 4 · 27.5 M" data-es="Nivel 4 a 27.5 m: Horizonte verde sobre Parque Cancún y copa de manglar." data-en="Level 4 at 27.5m: Green horizon over Parque Cancún and mangrove canopy.">
-                <div><strong data-i18n="l_4">Nivel 4 · Horizonte Verde</strong><small data-i18n="l_4_s">Vista Parque Cancún</small></div>
+              <button type="button" class="lvl-item" data-idx="4" data-src="https://drive.google.com/file/d/1_L0zA4mOskemnwC4B1yS73--WIRvW27P/preview" data-tag="DRON 180° · NIVEL 4 · 27.5 M" data-es="Vista real con dron 180° a 27.5 m (Niveles 4–5): Small S1 desde $6,709,445 MXN, Ocean Front desde $8,425,521 MXN, Large L1 desde $10,101,162 MXN y Medium desde $10,111,712 MXN." data-en="Real 180° drone view at 27.5m (Levels 4–5): Small S1 from $6,709,445 MXN, Ocean Front from $8,425,521 MXN, Large L1 from $10,101,162 MXN & Medium from $10,111,712 MXN.">
+                <div><strong data-i18n="l_4">Niveles 4–5 · Horizonte Verde</strong><small data-i18n="l_4_s">Small desde $6,709,445 MXN</small></div>
                 <span class="lvl-m">27.5 m</span>
               </button>
-              <button type="button" class="lvl-item" data-idx="5" data-src="https://player.vimeo.com/video/1204748732?dnt=1&autoplay=1&title=0&byline=0&portrait=0" data-tag="NIVEL 1 · 17 M" data-es="Nivel 1 a 17 m: The Villas Collection y Garden Houses desde $7,500,000 MXN." data-en="Level 1 at 17m: The Villas Collection & Garden Houses from $7,500,000 MXN.">
-                <div><strong data-i18n="l_1">Nivel 1 · Villas & Garden</strong><small data-i18n="l_1_s">Conexión con jardines y albercas</small></div>
+              <button type="button" class="lvl-item" data-idx="5" data-src="https://drive.google.com/file/d/1t906jPsJzV0-q7pQL3fppUNhKv-7AbL1/preview" data-tag="DRON 180° · NIVEL 1 · 17 M" data-es="Vista real con dron 180° a 17 m (Niveles 1–3): Garden House 1R+Den ($8,425,521 MXN), Garden House 2R+Den ($9,595,924 a $13,940,892 MXN) y The Villas ($19,145,275 a $21,318,180 MXN)." data-en="Real 180° drone view at 17m (Levels 1–3): Garden House 1B+Den ($8,425,521 MXN), Garden House 2B+Den ($9,595,924 to $13,940,892 MXN) & The Villas ($19,145,275 to $21,318,180 MXN).">
+                <div><strong data-i18n="l_1">Niveles 1–3 · Villas & Garden</strong><small data-i18n="l_1_s">GH desde $8,425,521 · Villas $19.14M</small></div>
                 <span class="lvl-m">17 m</span>
               </button>
             </div>
           </div>
           <div style="display:flex; justify-content:flex-start;">
-            <a href="#residencias" class="btn btn-white" data-i18n="lvl_cta">Ver Tipologías por Nivel</a>
+            <a href="#residencias" class="btn btn-white" data-i18n="lvl_cta">Ver Inventario Completo</a>
           </div>
         </aside>
       </div>
@@ -788,7 +740,7 @@
               <span class="pillar-num">01</span>
               <div>
                 <h4 data-i18n="p1_t">Dos Torres de 20 Pisos</h4>
-                <p data-i18n="p1_d">Tipologías desde 71.25 m² hasta Pent-Houses de 260.03 m² y la colección privada The Villas Collection.</p>
+                <p data-i18n="p1_d">Tipologías desde 71.15 m² hasta Pent-Houses de 260.03 m² y la colección privada The Villas Collection.</p>
               </div>
             </div>
             <div class="pillar-row">
@@ -843,78 +795,59 @@
     </div>
   </section>
 
-  <!-- TIPOLOGÍAS Y PRECIOS OFICIALES EN MXN (Navy #0C2340) -->
+  <!-- TIPOLOGÍAS Y PRECIOS EXACTOS DE 3. INVENTARIO (TORRE A Y TORRE B) -->
   <section class="sec-navy" id="residencias">
     <div class="container">
       <div class="sec-head" data-reveal>
-        <span class="eyebrow eyebrow--light" data-i18n="res_eyebrow">Inventario y Tipologías Oficiales</span>
-        <h2 data-i18n="res_title">Precios de preventa en pesos mexicanos.</h2>
-        <p data-i18n="res_sub">Cifras oficiales vigentes de Torre A, Torre B, Garden House y The Villas Collection.</p>
+        <span class="eyebrow eyebrow--light" data-i18n="res_eyebrow">Inventario Vigente · Torre A y Torre B</span>
+        <h2 data-i18n="res_title">Precios exactos de inventario en pesos mexicanos.</h2>
+        <p data-i18n="res_sub">Costos oficiales conforme a las listas vigentes de Torre A y Torre B en la carpeta 3. INVENTARIO.</p>
       </div>
 
       <div class="filter-bar" data-reveal>
         <button type="button" class="chip-btn active" data-filter="all" data-i18n="flt_all">Todas</button>
         <button type="button" class="chip-btn" data-filter="depto" data-i18n="flt_depto">Departamentos</button>
         <button type="button" class="chip-btn" data-filter="garden" data-i18n="flt_garden">Garden House</button>
-        <button type="button" class="chip-btn" data-filter="villa" data-i18n="flt_villa">Villas & Pent-House</button>
+        <button type="button" class="chip-btn" data-filter="villa" data-i18n="flt_villa">Villas, Sky View & PH</button>
       </div>
 
       <div class="units-grid" data-reveal>
+        <!-- 1. Small (S1) -->
         <article class="unit-card" data-category="depto">
           <div class="unit-media">
             <img src="https://lh3.googleusercontent.com/d/1dPYRv3Rk6OugenjWbBzobm-Sqqz2SLun=w1200" alt="Small Nautica" loading="lazy" />
-            <span class="unit-badge" data-i18n="u1_tag">Small · 1 Rec + Den</span>
+            <span class="unit-badge" data-i18n="u1_tag">Small (S1) · 1 Rec + Den</span>
           </div>
           <div class="unit-content">
             <h3>Prototipos Small (S1)</h3>
             <div class="unit-price" data-i18n="u1_price">Desde $6,709,445 MXN</div>
             <ul class="unit-list">
-              <li data-i18n="u1_s1"><strong>Superficie:</strong> 71.25 m² a 72.32 m²</li>
-              <li data-i18n="u1_s2"><strong>Distribución:</strong> 1 Habitación + Den, 1 Baño</li>
-              <li data-i18n="u1_s3"><strong>Espacios:</strong> Sala/Comedor, Cocina, Lavandería</li>
-              <li data-i18n="u1_s4"><strong>Exterior:</strong> Terraza privada · 1 cajón</li>
+              <li data-i18n="u1_s1"><strong>Superficie:</strong> 71.15 m² a 72.32 m²</li>
+              <li data-i18n="u1_s2"><strong>Exterior Norte (71.25 m²):</strong> Desde $6,709,445 MXN (N4)</li>
+              <li data-i18n="u1_s3"><strong>Interior Sur (72.32 m²):</strong> Desde $6,819,776 MXN (N4)</li>
+              <li data-i18n="u1_s4"><strong>Niveles Superiores (N14–N17):</strong> $7,470,750 a $7,593,600 MXN</li>
             </ul>
             <div class="unit-foot">
-              <a href="#contacto" class="btn btn-navy select-unit" data-unit="Small (desde $6,709,445 MXN)" data-i18n="btn_quote">Cotizar</a>
+              <a href="#contacto" class="btn btn-navy select-unit" data-unit="Small S1 (desde $6,709,445 MXN)" data-i18n="btn_quote">Cotizar</a>
               <button type="button" class="btn btn-ghost-navy view-plan" data-title="Prototipo Small (S1)" data-img="https://lh3.googleusercontent.com/d/1dPYRv3Rk6OugenjWbBzobm-Sqqz2SLun=w1400" data-i18n="btn_view">Vista</button>
             </div>
           </div>
         </article>
 
-        <article class="unit-card" data-category="garden">
-          <div class="unit-media">
-            <img src="https://lh3.googleusercontent.com/d/1_SwTeqQ5B-Rein0i0_GxYOA-_TTSMMUd=w1200" alt="Garden House" loading="lazy" />
-            <span class="unit-badge" data-i18n="u2_tag">Garden House · N1–N3</span>
-          </div>
-          <div class="unit-content">
-            <h3>Garden House</h3>
-            <div class="unit-price" data-i18n="u2_price">Desde $7,500,000 MXN</div>
-            <ul class="unit-list">
-              <li data-i18n="u2_s1"><strong>Superficie:</strong> 94.22 m² a 158.06 m²</li>
-              <li data-i18n="u2_s2"><strong>Distribución:</strong> 1 o 2 Habitaciones + Den</li>
-              <li data-i18n="u2_s3"><strong>Terrazas:</strong> Exteriores hasta 57.06 m²</li>
-              <li data-i18n="u2_s4"><strong>Estacionamiento:</strong> 1 a 2 cajones</li>
-            </ul>
-            <div class="unit-foot">
-              <a href="#contacto" class="btn btn-navy select-unit" data-unit="Garden House (desde $7,500,000 MXN)" data-i18n="btn_quote">Cotizar</a>
-              <button type="button" class="btn btn-ghost-navy view-plan" data-title="Planta Garden House L2" data-img="https://lh3.googleusercontent.com/d/1kCITMxiJwmydUjLonXIAwXdkJzq805ek=w1400" data-i18n="btn_plan">Planta</button>
-            </div>
-          </div>
-        </article>
-
+        <!-- 2. Ocean Front & Side Front (OF1 / OF2 / SF1 / SF2) -->
         <article class="unit-card" data-category="depto">
           <div class="unit-media">
             <img src="https://lh3.googleusercontent.com/d/1_BPdC5ZtIicfmtKn9SD5n7-j2oJg5dQi=w1200" alt="Ocean Front" loading="lazy" />
-            <span class="unit-badge" data-i18n="u3_tag">Ocean Front · Vista Laguna</span>
+            <span class="unit-badge" data-i18n="u3_tag">Ocean Front · 1 Rec + Den</span>
           </div>
           <div class="unit-content">
-            <h3>Ocean Front (OF1 / OF2)</h3>
+            <h3>Ocean Front (OF1 / OF2 / SF)</h3>
             <div class="unit-price" data-i18n="u3_price">Desde $8,425,521 MXN</div>
             <ul class="unit-list">
               <li data-i18n="u3_s1"><strong>Superficie:</strong> 93.93 m² a 134.39 m²</li>
-              <li data-i18n="u3_s2"><strong>Distribución:</strong> 1 Habitación + Den, 1 Baño</li>
-              <li data-i18n="u3_s3"><strong>Orientación:</strong> Vista directa a Laguna</li>
-              <li data-i18n="u3_s4"><strong>Exterior:</strong> Terraza panorámica privada</li>
+              <li data-i18n="u3_s2"><strong>OF1 / SF1 (93.93–94.22 m²):</strong> Desde $8,425,521 MXN</li>
+              <li data-i18n="u3_s3"><strong>OF2 / SF2 (108.41 m²):</strong> Desde $9,724,377 a $9,778,562 MXN</li>
+              <li data-i18n="u3_s4"><strong>OF2 Garden (134.39 m² TB):</strong> $12,054,783 MXN</li>
             </ul>
             <div class="unit-foot">
               <a href="#contacto" class="btn btn-navy select-unit" data-unit="Ocean Front (desde $8,425,521 MXN)" data-i18n="btn_quote">Cotizar</a>
@@ -923,64 +856,89 @@
           </div>
         </article>
 
-        <article class="unit-card" data-category="depto">
+        <!-- 3. Garden House (GH 1 - GH 17 en N1-N3) -->
+        <article class="unit-card" data-category="garden">
           <div class="unit-media">
-            <img src="https://lh3.googleusercontent.com/d/1FeojMhCK6sMrh7NjOOxnMD-Dybru_hYD=w1200" alt="Medium Nautica" loading="lazy" />
-            <span class="unit-badge" data-i18n="u4_tag">Medium · 2 Recámaras</span>
+            <img src="https://lh3.googleusercontent.com/d/1_SwTeqQ5B-Rein0i0_GxYOA-_TTSMMUd=w1200" alt="Garden House" loading="lazy" />
+            <span class="unit-badge" data-i18n="u2_tag">Garden House · Niveles 1–3</span>
           </div>
           <div class="unit-content">
-            <h3>Prototipos Medium (M2 / M3)</h3>
-            <div class="unit-price" data-i18n="u4_price">Desde $9,040,000 MXN</div>
+            <h3>Garden House (GH 1 – GH 17)</h3>
+            <div class="unit-price" data-i18n="u2_price">Desde $9,595,924 MXN</div>
             <ul class="unit-list">
-              <li data-i18n="u4_s1"><strong>Superficie:</strong> 107 m² a 115.67 m²</li>
-              <li data-i18n="u4_s2"><strong>Distribución:</strong> 2 Habitaciones, 2 Baños</li>
-              <li data-i18n="u4_s3"><strong>Espacios:</strong> Sala/Comedor, Cocina, Lavandería</li>
-              <li data-i18n="u4_s4"><strong>Exterior:</strong> Terraza privada · 2 cajones</li>
+              <li data-i18n="u2_s1"><strong>GH M1A (108.10–113.86 m² · 2R+Den):</strong> $9,595,924 MXN</li>
+              <li data-i18n="u2_s2"><strong>GH L1 (112–113.56 m² · 2R+Den):</strong> $9,878,400 a $10,015,992 MXN</li>
+              <li data-i18n="u2_s3"><strong>GH L2 / M2 (125.97–145.04 m²):</strong> $11,121,138 a $12,792,528 MXN</li>
+              <li data-i18n="u2_s4"><strong>GH M3A / M3B (148.90–158.06 m²):</strong> $13,132,098 a $13,940,892 MXN</li>
             </ul>
             <div class="unit-foot">
-              <a href="#contacto" class="btn btn-navy select-unit" data-unit="Medium (desde $9,040,000 MXN)" data-i18n="btn_quote">Cotizar</a>
-              <button type="button" class="btn btn-ghost-navy view-plan" data-title="Planta Prototipo Medium M2" data-img="https://lh3.googleusercontent.com/d/1O1hXnIzzOfL29DMhcM19jMjeXPK6AexQ=w1400" data-i18n="btn_plan">Planta</button>
+              <a href="#contacto" class="btn btn-navy select-unit" data-unit="Garden House (desde $9,595,924 MXN)" data-i18n="btn_quote">Cotizar</a>
+              <button type="button" class="btn btn-ghost-navy view-plan" data-title="Planta Garden House L2" data-img="https://lh3.googleusercontent.com/d/1kCITMxiJwmydUjLonXIAwXdkJzq805ek=w1400" data-i18n="btn_plan">Planta</button>
             </div>
           </div>
         </article>
 
+        <!-- 4. Large (L1 / L2) -->
         <article class="unit-card" data-category="depto">
           <div class="unit-media">
             <img src="https://lh3.googleusercontent.com/d/1JEcelSy6SYGdkEUo8NZ2-ccsa3-QNBLg=w1200" alt="Large Nautica" loading="lazy" />
-            <span class="unit-badge" data-i18n="u5_tag">Large · 2 Rec + Den</span>
+            <span class="unit-badge" data-i18n="u5_tag">Large (L1 / L2) · 2 Rec + Den</span>
           </div>
           <div class="unit-content">
             <h3>Prototipos Large (L1 / L2)</h3>
-            <div class="unit-price" data-i18n="u5_price">Desde $9,360,000 MXN</div>
+            <div class="unit-price" data-i18n="u5_price">Desde $9,878,400 MXN</div>
             <ul class="unit-list">
-              <li data-i18n="u5_s1"><strong>Superficie:</strong> 112 m² a 126.09 m²</li>
-              <li data-i18n="u5_s2"><strong>Distribución:</strong> 2 Habitaciones + Den</li>
-              <li data-i18n="u5_s3"><strong>Baños:</strong> 2 Baños completos, Lavandería</li>
-              <li data-i18n="u5_s4"><strong>Exterior:</strong> Terraza privada Norte o Sur</li>
+              <li data-i18n="u5_s1"><strong>Superficie:</strong> 112 m² (L1) a 126.09 m² (L2)</li>
+              <li data-i18n="u5_s2"><strong>L1 Exterior Norte (112–113.56 m²):</strong> Desde $9,878,400 MXN</li>
+              <li data-i18n="u5_s3"><strong>L1 Torre (N4–N17):</strong> $10,101,162 a $11,923,800 MXN</li>
+              <li data-i18n="u5_s4"><strong>L2 Interior Sur (126.09 m²):</strong> $11,121,138 a $13,239,450 MXN</li>
             </ul>
             <div class="unit-foot">
-              <a href="#contacto" class="btn btn-navy select-unit" data-unit="Large (desde $9,360,000 MXN)" data-i18n="btn_quote">Cotizar</a>
+              <a href="#contacto" class="btn btn-navy select-unit" data-unit="Large L1/L2 (desde $9,878,400 MXN)" data-i18n="btn_quote">Cotizar</a>
               <button type="button" class="btn btn-ghost-navy view-plan" data-title="Planta Prototipo Large" data-img="https://lh3.googleusercontent.com/d/13VTqgzDPkTrpm1G4Hx3giGQNo9T-nbFB=w1400" data-i18n="btn_plan">Planta</button>
             </div>
           </div>
         </article>
 
+        <!-- 5. Medium (M) -->
+        <article class="unit-card" data-category="depto">
+          <div class="unit-media">
+            <img src="https://lh3.googleusercontent.com/d/1FeojMhCK6sMrh7NjOOxnMD-Dybru_hYD=w1200" alt="Medium Nautica" loading="lazy" />
+            <span class="unit-badge" data-i18n="u4_tag">Medium (M) · 2 Recámaras</span>
+          </div>
+          <div class="unit-content">
+            <h3>Prototipos Medium (M)</h3>
+            <div class="unit-price" data-i18n="u4_price">Desde $10,111,712 MXN</div>
+            <ul class="unit-list">
+              <li data-i18n="u4_s1"><strong>Superficie:</strong> 113.26 m² a 115.67 m²</li>
+              <li data-i18n="u4_s2"><strong>Exterior Norte (113.36 m² N4):</strong> Desde $10,111,712 MXN</li>
+              <li data-i18n="u4_s3"><strong>Interior Sur (115.67 m² N10–N13):</strong> Desde $10,638,170 MXN</li>
+              <li data-i18n="u4_s4"><strong>Niveles Superiores (N14–N17):</strong> $11,902,800 a $12,145,350 MXN</li>
+            </ul>
+            <div class="unit-foot">
+              <a href="#contacto" class="btn btn-navy select-unit" data-unit="Medium M (desde $10,111,712 MXN)" data-i18n="btn_quote">Cotizar</a>
+              <button type="button" class="btn btn-ghost-navy view-plan" data-title="Planta Prototipo Medium M2" data-img="https://lh3.googleusercontent.com/d/1O1hXnIzzOfL29DMhcM19jMjeXPK6AexQ=w1400" data-i18n="btn_plan">Planta</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 6. The Villas, Sky View & Pent-House -->
         <article class="unit-card" data-category="villa">
           <div class="unit-media">
             <img src="https://lh3.googleusercontent.com/d/1VfbnYkxnxkLJVAn_-BTng19CRxDzgICo=w1200" alt="The Villas & Pent-House" loading="lazy" />
-            <span class="unit-badge" data-i18n="u6_tag">Villas & Pent-House</span>
+            <span class="unit-badge" data-i18n="u6_tag">Villas, Sky View & PH · 3 Rec</span>
           </div>
           <div class="unit-content">
-            <h3>The Villas & Pent-House</h3>
-            <div class="unit-price" data-i18n="u6_price">Desde $17,250,000 MXN</div>
+            <h3>The Villas, Sky View & PH</h3>
+            <div class="unit-price" data-i18n="u6_price">Desde $19,145,275 MXN</div>
             <ul class="unit-list">
-              <li data-i18n="u6_s1"><strong>Villas (V1–V4 / VA3):</strong> 211.55 a 275.58 m² · 3 Rec</li>
-              <li data-i18n="u6_s2"><strong>Ocean View (OV / SV):</strong> 203.29 m² desde $19,794,080 MXN</li>
-              <li data-i18n="u6_s3"><strong>Pent-House (PH1 / PH2):</strong> 260.03 m² desde $27,303,150 MXN</li>
-              <li data-i18n="u6_s4"><strong>Estacionamiento:</strong> Hasta 3 cajones en Villas</li>
+              <li data-i18n="u6_s1"><strong>Villas V4 (211.55 m²) y VEB (231.32 m²):</strong> $19,145,275 a $20,935,365 MXN</li>
+              <li data-i18n="u6_s2"><strong>Villas V1 (235.56 m²) y V2 (249.21 m²):</strong> $21,318,180 a $22,555,315 MXN</li>
+              <li data-i18n="u6_s3"><strong>Sky View SV (205.12 m² Laguna):</strong> $19,794,080 a $21,537,600 MXN</li>
+              <li data-i18n="u6_s4"><strong>Pent-House PH1 / PH2 (260.03 m²):</strong> $27,303,150 MXN</li>
             </ul>
             <div class="unit-foot">
-              <a href="#contacto" class="btn btn-navy select-unit" data-unit="The Villas / Pent-House (desde $17,250,000 MXN)" data-i18n="btn_quote">Cotizar</a>
+              <a href="#contacto" class="btn btn-navy select-unit" data-unit="The Villas / Sky View / PH (desde $19,145,275 MXN)" data-i18n="btn_quote">Cotizar</a>
               <button type="button" class="btn btn-ghost-navy view-plan" data-title="Planta Villa V2" data-img="https://lh3.googleusercontent.com/d/1XsdGurIKFPFt7Vzz1nZ8BLZ8f4gLO_i2=w1400" data-i18n="btn_plan">Planta</button>
             </div>
           </div>
@@ -989,27 +947,36 @@
     </div>
   </section>
 
-  <!-- SIMULADOR DE PLANES DE PAGO EN MXN (Blanco Puro #FFFFFF) -->
+  <!-- SIMULADOR DE PLANES DE PAGO EN MXN (Cifras exactas 3. INVENTARIO) -->
   <section class="sec-white" id="inversion">
     <div class="container">
       <div class="sec-head" data-reveal>
         <span class="eyebrow" data-i18n="pay_eyebrow">Política de Descuentos Vigente</span>
         <h2 data-i18n="pay_title">Simula tu esquema de pago en pesos mexicanos.</h2>
-        <p data-i18n="pay_sub">Esquemas oficiales con descuentos de hasta 8% sobre precio de lista.</p>
+        <p data-i18n="pay_sub">Selecciona cualquier unidad disponible del inventario oficial de Torre A y Torre B con hasta 8% de descuento.</p>
       </div>
 
       <div class="sim-grid" data-reveal>
         <div class="sim-panel">
-          <label for="calcUnit" class="sim-lbl" data-i18n="pay_s1">1. Tipología de referencia</label>
+          <label for="calcUnit" class="sim-lbl" data-i18n="pay_s1">1. Unidad disponible (Inventario Torre A / B)</label>
           <select id="calcUnit" class="sim-select">
-            <option value="6709445">Small (71.25 m²) — $6,709,445 MXN</option>
-            <option value="7500000">Garden House (94.22 m²) — $7,500,000 MXN</option>
-            <option value="8425521">Ocean Front (93.93 m²) — $8,425,521 MXN</option>
-            <option value="9040000">Medium (113.26 m²) — $9,040,000 MXN</option>
-            <option value="9360000">Large (113.56 m²) — $9,360,000 MXN</option>
-            <option value="17250000">The Villas V4 (211.55 m²) — $17,250,000 MXN</option>
-            <option value="19794080">Ocean View SV (205.12 m²) — $19,794,080 MXN</option>
-            <option value="27303150">Pent-House (260.03 m²) — $27,303,150 MXN</option>
+            <option value="6709445">Small S1 · N4 (71.25 m²) — $6,709,445 MXN</option>
+            <option value="6819776">Small S1 Interior · N4 (72.32 m²) — $6,819,776 MXN</option>
+            <option value="8425521">Ocean Front OF1 · N3–N5 (93.93 m²) — $8,425,521 MXN</option>
+            <option value="9595924">Garden House GH-15 M1A (113.86 m²) — $9,595,924 MXN</option>
+            <option value="9724377">Ocean Front OF2 · N4–N7 (108.41 m²) — $9,724,377 MXN</option>
+            <option value="9878400">Large L1 · GH-1 (112.00 m²) — $9,878,400 MXN</option>
+            <option value="10101162">Large L1 · N4 Torre B (113.56 m²) — $10,101,162 MXN</option>
+            <option value="10111712">Medium M · N4 Torre A/B (113.36 m²) — $10,111,712 MXN</option>
+            <option value="11121138">Large L2 · GH-5 Torre B (126.09 m²) — $11,121,138 MXN</option>
+            <option value="11914184">Garden House M2 · N3 (134.32 m²) — $11,914,184 MXN</option>
+            <option value="13132098">Garden House M3A · N1 (148.90 m²) — $13,132,098 MXN</option>
+            <option value="13940892">Garden House M3B · N2 (158.06 m²) — $13,940,892 MXN</option>
+            <option value="19145275">Villa V4 · Marova / Navia (211.55 m²) — $19,145,275 MXN</option>
+            <option value="19794080">Sky View SV · N10 Torre B (205.12 m²) — $19,794,080 MXN</option>
+            <option value="20935365">Villa VEB · Solandra (231.32 m²) — $20,935,365 MXN</option>
+            <option value="21318180">Villa V1 · Aelora / Oriana (235.56 m²) — $21,318,180 MXN</option>
+            <option value="27303150">Pent-House PH1 / PH2 (260.03 m²) — $27,303,150 MXN</option>
           </select>
 
           <span class="sim-lbl" style="margin-top: 22px;" data-i18n="pay_s2">2. Esquema de pago</span>
@@ -1031,7 +998,7 @@
 
         <div class="sim-result">
           <div>
-            <span class="eyebrow eyebrow--light" data-i18n="pay_sum">Desglose Estimado MXN</span>
+            <span class="eyebrow eyebrow--light" data-i18n="pay_sum">Desglose Exacto MXN</span>
             <div class="cap-bar" aria-hidden="true">
               <div class="cap-down" id="barDown" style="width:30%"></div>
               <div class="cap-mid" id="barMid" style="width:0%"></div>
@@ -1057,7 +1024,7 @@
     </div>
   </section>
 
-  <!-- VIDEOS OFICIALES (Vimeo CDN + MP4 Directo para carga inmediata en GitHub Pages) -->
+  <!-- VIDEOS OFICIALES (Vimeo CDN + MP4 Directo) -->
   <section class="sec-navy" id="experiencia">
     <div class="container">
       <div class="sec-head" data-reveal>
@@ -1102,7 +1069,7 @@
             </video>
           </div>
           <div style="display:flex;justify-content:flex-start;">
-            <a href="#contacto" class="btn btn-ghost-white" data-i18n="reel_cta">Solicitar Press Kit</a>
+            <a href="#contacto" class="btn btn-ghost-white" data-i18n="reel_cta">Solicitar Información</a>
           </div>
         </aside>
       </div>
@@ -1175,7 +1142,7 @@
         </div>
 
         <p style="font-size: 0.74rem; color: rgba(255,255,255,0.58); margin-bottom: 0;" data-i18n="adv_legal">
-          Las imágenes y cifras presentadas corresponden al material oficial del desarrollo. Disponibilidad y precios en MXN sujetos a actualización.
+          Las imágenes y cifras presentadas corresponden al inventario oficial de Torre A y Torre B. Disponibilidad y precios en MXN sujetos a actualización.
         </p>
       </div>
 
@@ -1213,12 +1180,12 @@
             <div class="field">
               <label for="unitInterest" data-i18n="lbl_unit">Tipología de interés</label>
               <select id="unitInterest">
-                <option value="Small (desde $6,709,445 MXN)">Small — Desde $6,709,445 MXN</option>
-                <option value="Garden House (desde $7,500,000 MXN)">Garden House — Desde $7,500,000 MXN</option>
+                <option value="Small S1 (desde $6,709,445 MXN)">Small (S1) — Desde $6,709,445 MXN</option>
                 <option value="Ocean Front (desde $8,425,521 MXN)">Ocean Front — Desde $8,425,521 MXN</option>
-                <option value="Medium (desde $9,040,000 MXN)">Medium — Desde $9,040,000 MXN</option>
-                <option value="Large (desde $9,360,000 MXN)">Large — Desde $9,360,000 MXN</option>
-                <option value="The Villas / Pent-House (desde $17,250,000 MXN)">The Villas / Pent-House — Desde $17,250,000 MXN</option>
+                <option value="Garden House (desde $9,595,924 MXN)">Garden House — Desde $9,595,924 MXN</option>
+                <option value="Large L1/L2 (desde $9,878,400 MXN)">Large (L1 / L2) — Desde $9,878,400 MXN</option>
+                <option value="Medium M (desde $10,111,712 MXN)">Medium (M) — Desde $10,111,712 MXN</option>
+                <option value="The Villas / Sky View / PH (desde $19,145,275 MXN)">Villas / Sky View / PH — Desde $19,145,275 MXN</option>
               </select>
             </div>
 
@@ -1296,8 +1263,7 @@
   </div>
 
   <script>
-    // Si cuentas con un enlace externo de maqueta 3D, colócalo aquí para embeberlo directo:
-    const EXTERNAL_3D_URL = "";
+    const HAUZD_3D_URL = "https://nautica.hauzd.app/";
 
     let currentLang = 'es';
     const i18n = {
@@ -1307,23 +1273,24 @@
         hero_sub: "Hotel Living frente a la Laguna Nichupté y Parque Cancún. Dos torres arquitectónicas de 20 pisos, más de 50 amenidades 5 estrellas y Club de Playa privado en Costa Mujeres.",
         hero_cta_3d: "Explorar Maqueta 3D", hero_cta_quote: "Ver Precios en MXN",
         m_towers: "Torres y Pisos", m_am: "Amenidades 5 Estrellas", m_price: "MXN · Desde", m_disc: "Esquema 80% - 20%",
-        m3d_eyebrow: "Maqueta Interactiva 3D y Elevación Real",
-        m3d_title: "Explora la volumetría en 3D y los recorridos por nivel.",
-        m3d_sub: "Gira la maqueta arquitectónica 3D de Torres A y B o selecciona cualquier nivel para reproducir su recorrido audiovisual.",
-        tab_3d: "Maqueta 3D Interactiva", tab_drone: "Recorrido en Video por Nivel",
-        cap_default: "Haz clic en cualquier nivel de la maqueta o arrastra para rotar las Torres A y B.",
-        m3d_btn: "Agendar Presentación", lvl_eyebrow: "Cota de Altura Real", lvl_title: "Selecciona un nivel",
-        l_roof: "Rooftop Sky Lounge", l_roof_s: "Infinity Pool · Vista 360°",
-        l_16: "Nivel 16 · Residencias Altas", l_16_s: "180° Laguna Sur y Norte",
-        l_12: "Nivel 12 · Media-Alta", l_12_s: "180° Laguna Nichupté",
-        l_8: "Nivel 8 · Residencias", l_8_s: "180° Manglar y Laguna",
-        l_4: "Nivel 4 · Horizonte Verde", l_4_s: "Vista Parque Cancún",
-        l_1: "Nivel 1 · Villas & Garden", l_1_s: "Conexión con jardines y albercas",
-        lvl_cta: "Ver Tipologías por Nivel",
+        m3d_eyebrow: "Experiencia Interactiva 3D en Tiempo Real",
+        m3d_title: "Explora la maqueta 3D oficial, unidades y vistas por nivel.",
+        m3d_sub: "Navega libremente las Torres A y B en el modelo 3D interactivo oficial o selecciona un nivel para ver su vista real con dron 180°.",
+        tab_hauzd: "Maqueta 3D Oficial",
+        btn_full3d: "Pantalla Completa ↗",
+        cap_default: "Interactúa directamente con la maqueta 3D oficial: gira 360°, acerca y explora las Torres A y B.",
+        m3d_btn: "Agendar Presentación", lvl_eyebrow: "Cota de Altura e Inventario", lvl_title: "Explora por nivel",
+        l_roof: "Rooftop Sky Lounge", l_roof_s: "Infinity Pool · Vista Dron 180°",
+        l_16: "Niveles 14–17 · PH & Sky View", l_16_s: "Desde $7,470,750 a $27,303,150 MXN",
+        l_12: "Niveles 10–13 · Media-Alta", l_12_s: "Desde $6,865,975 MXN",
+        l_8: "Niveles 6–9 · Residencias", l_8_s: "Desde $6,759,250 MXN",
+        l_4: "Niveles 4–5 · Horizonte Verde", l_4_s: "Small desde $6,709,445 MXN",
+        l_1: "Niveles 1–3 · Villas & Garden", l_1_s: "GH desde $8,425,521 · Villas $19.14M",
+        lvl_cta: "Ver Inventario Completo",
         arch_eyebrow: "Arquitectura y Visión",
         arch_title: "Diseño náutico contemporáneo frente a Laguna Nichupté.",
         arch_sub: "Desarrollado por <strong>Naúma Development Group</strong> junto a <strong>Nautica</strong> y comercializado por <strong>GMB</strong>. Una arquitectura limpia y atemporal pensada para maximizar vistas, privacidad y plusvalía.",
-        p1_t: "Dos Torres de 20 Pisos", p1_d: "Tipologías desde 71.25 m² hasta Pent-Houses de 260.03 m² y la colección privada The Villas Collection.",
+        p1_t: "Dos Torres de 20 Pisos", p1_d: "Tipologías desde 71.15 m² hasta Pent-Houses de 260.03 m² y la colección privada The Villas Collection.",
         p2_t: "Vistas a Laguna Nichupté y Mar Caribe", p2_d: "Orientación privilegiada hacia Laguna Nichupté, manglar protegido y Parque Cancún.",
         p3_t: "Beach Club Privado en Isla Blanca", p3_d: "Club de playa en Costa Mujeres con transporte privado y tarifas preferenciales en lanchas y catamaranes.",
         p4_t: "Seguridad Integral 24/7", p4_d: "Circuito cerrado de vigilancia continua, accesos controlados y hospitalidad 5 estrellas.",
@@ -1334,29 +1301,47 @@
         c3_p: "Laguna Nichupté", c3_n: "Corredor náutico y marinas.",
         c4_p: "Centro de Cancún", c4_n: "Colegios, hospitales y servicios.",
         c5_p: "Aeropuerto Int.", c5_n: "Conexión ágil nacional e int.",
-        res_eyebrow: "Inventario y Tipologías Oficiales", res_title: "Precios de preventa en pesos mexicanos.",
-        res_sub: "Cifras oficiales vigentes de Torre A, Torre B, Garden House y The Villas Collection.",
-        flt_all: "Todas", flt_depto: "Departamentos", flt_garden: "Garden House", flt_villa: "Villas & Pent-House",
-        u1_tag: "Small · 1 Rec + Den", u1_price: "Desde $6,709,445 MXN",
-        u1_s1: "<strong>Superficie:</strong> 71.25 m² a 72.32 m²", u1_s2: "<strong>Distribución:</strong> 1 Habitación + Den, 1 Baño", u1_s3: "<strong>Espacios:</strong> Sala/Comedor, Cocina, Lavandería", u1_s4: "<strong>Exterior:</strong> Terraza privada · 1 cajón",
-        u2_tag: "Garden House · N1–N3", u2_price: "Desde $7,500,000 MXN",
-        u2_s1: "<strong>Superficie:</strong> 94.22 m² a 158.06 m²", u2_s2: "<strong>Distribución:</strong> 1 o 2 Habitaciones + Den", u2_s3: "<strong>Terrazas:</strong> Exteriores hasta 57.06 m²", u2_s4: "<strong>Estacionamiento:</strong> 1 a 2 cajones",
-        u3_tag: "Ocean Front · Vista Laguna", u3_price: "Desde $8,425,521 MXN",
-        u3_s1: "<strong>Superficie:</strong> 93.93 m² a 134.39 m²", u3_s2: "<strong>Distribución:</strong> 1 Habitación + Den, 1 Baño", u3_s3: "<strong>Orientación:</strong> Vista directa a Laguna", u3_s4: "<strong>Exterior:</strong> Terraza panorámica privada",
-        u4_tag: "Medium · 2 Recámaras", u4_price: "Desde $9,040,000 MXN",
-        u4_s1: "<strong>Superficie:</strong> 107 m² a 115.67 m²", u4_s2: "<strong>Distribución:</strong> 2 Habitaciones, 2 Baños", u4_s3: "<strong>Espacios:</strong> Sala/Comedor, Cocina, Lavandería", u4_s4: "<strong>Exterior:</strong> Terraza privada · 2 cajones",
-        u5_tag: "Large · 2 Rec + Den", u5_price: "Desde $9,360,000 MXN",
-        u5_s1: "<strong>Superficie:</strong> 112 m² a 126.09 m²", u5_s2: "<strong>Distribución:</strong> 2 Habitaciones + Den", u5_s3: "<strong>Baños:</strong> 2 Baños completos, Lavandería", u5_s4: "<strong>Exterior:</strong> Terraza privada Norte o Sur",
-        u6_tag: "Villas & Pent-House", u6_price: "Desde $17,250,000 MXN",
-        u6_s1: "<strong>Villas (V1–V4 / VA3):</strong> 211.55 a 275.58 m² · 3 Rec", u6_s2: "<strong>Ocean View (OV / SV):</strong> 203.29 m² desde $19,794,080 MXN", u6_s3: "<strong>Pent-House (PH1 / PH2):</strong> 260.03 m² desde $27,303,150 MXN", u6_s4: "<strong>Estacionamiento:</strong> Hasta 3 cajones en Villas",
+        res_eyebrow: "Inventario Vigente · Torre A y Torre B", res_title: "Precios exactos de inventario en pesos mexicanos.",
+        res_sub: "Costos oficiales conforme a las listas vigentes de Torre A y Torre B en la carpeta 3. INVENTARIO.",
+        flt_all: "Todas", flt_depto: "Departamentos", flt_garden: "Garden House", flt_villa: "Villas, Sky View & PH",
+        u1_tag: "Small (S1) · 1 Rec + Den", u1_price: "Desde $6,709,445 MXN",
+        u1_s1: "<strong>Superficie:</strong> 71.15 m² a 72.32 m²",
+        u1_s2: "<strong>Exterior Norte (71.25 m²):</strong> Desde $6,709,445 MXN (N4)",
+        u1_s3: "<strong>Interior Sur (72.32 m²):</strong> Desde $6,819,776 MXN (N4)",
+        u1_s4: "<strong>Niveles Superiores (N14–N17):</strong> $7,470,750 a $7,593,600 MXN",
+        u3_tag: "Ocean Front · 1 Rec + Den", u3_price: "Desde $8,425,521 MXN",
+        u3_s1: "<strong>Superficie:</strong> 93.93 m² a 134.39 m²",
+        u3_s2: "<strong>OF1 / SF1 (93.93–94.22 m²):</strong> Desde $8,425,521 MXN",
+        u3_s3: "<strong>OF2 / SF2 (108.41 m²):</strong> Desde $9,724,377 a $9,778,562 MXN",
+        u3_s4: "<strong>OF2 Garden (134.39 m² TB):</strong> $12,054,783 MXN",
+        u2_tag: "Garden House · Niveles 1–3", u2_price: "Desde $9,595,924 MXN",
+        u2_s1: "<strong>GH M1A (108.10–113.86 m² · 2R+Den):</strong> $9,595,924 MXN",
+        u2_s2: "<strong>GH L1 (112–113.56 m² · 2R+Den):</strong> $9,878,400 a $10,015,992 MXN",
+        u2_s3: "<strong>GH L2 / M2 (125.97–145.04 m²):</strong> $11,121,138 a $12,792,528 MXN",
+        u2_s4: "<strong>GH M3A / M3B (148.90–158.06 m²):</strong> $13,132,098 a $13,940,892 MXN",
+        u5_tag: "Large (L1 / L2) · 2 Rec + Den", u5_price: "Desde $9,878,400 MXN",
+        u5_s1: "<strong>Superficie:</strong> 112 m² (L1) a 126.09 m² (L2)",
+        u5_s2: "<strong>L1 Exterior Norte (112–113.56 m²):</strong> Desde $9,878,400 MXN",
+        u5_s3: "<strong>L1 Torre (N4–N17):</strong> $10,101,162 a $11,923,800 MXN",
+        u5_s4: "<strong>L2 Interior Sur (126.09 m²):</strong> $11,121,138 a $13,239,450 MXN",
+        u4_tag: "Medium (M) · 2 Recámaras", u4_price: "Desde $10,111,712 MXN",
+        u4_s1: "<strong>Superficie:</strong> 113.26 m² a 115.67 m²",
+        u4_s2: "<strong>Exterior Norte (113.36 m² N4):</strong> Desde $10,111,712 MXN",
+        u4_s3: "<strong>Interior Sur (115.67 m² N10–N13):</strong> Desde $10,638,170 MXN",
+        u4_s4: "<strong>Niveles Superiores (N14–N17):</strong> $11,902,800 a $12,145,350 MXN",
+        u6_tag: "Villas, Sky View & PH · 3 Rec", u6_price: "Desde $19,145,275 MXN",
+        u6_s1: "<strong>Villas V4 (211.55 m²) y VEB (231.32 m²):</strong> $19,145,275 a $20,935,365 MXN",
+        u6_s2: "<strong>Villas V1 (235.56 m²) y V2 (249.21 m²):</strong> $21,318,180 a $22,555,315 MXN",
+        u6_s3: "<strong>Sky View SV (205.12 m² Laguna):</strong> $19,794,080 a $21,537,600 MXN",
+        u6_s4: "<strong>Pent-House PH1 / PH2 (260.03 m²):</strong> $27,303,150 MXN",
         btn_quote: "Cotizar", btn_view: "Vista", btn_plan: "Planta",
-        pay_eyebrow: "Política de Descuentos Vigente", pay_title: "Simula tu esquema de pago en pesos mexicanos.", pay_sub: "Esquemas oficiales con descuentos de hasta 8% sobre precio de lista.",
-        pay_s1: "1. Tipología de referencia", pay_s2: "2. Esquema de pago",
+        pay_eyebrow: "Política de Descuentos Vigente", pay_title: "Simula tu esquema de pago en pesos mexicanos.", pay_sub: "Selecciona cualquier unidad disponible del inventario oficial de Torre A y Torre B con hasta 8% de descuento.",
+        pay_s1: "1. Unidad disponible (Inventario Torre A / B)", pay_s2: "2. Esquema de pago",
         d_0: "0% Descuento", d_4: "4% Descuento", d_5: "5% Descuento", d_8: "8% Descuento",
-        pay_sum: "Desglose Estimado MXN", pay_list: "Precio de Lista", pay_tot: "Precio Final", pay_cta: "Solicitar este Esquema",
+        pay_sum: "Desglose Exacto MXN", pay_list: "Precio de Lista", pay_tot: "Precio Final", pay_cta: "Solicitar este Esquema",
         vid_eyebrow: "Acervo Audiovisual Oficial", vid_title: "Nautica Residences en movimiento.", vid_sub: "Explora los videos conceptuales, la colección The Villas y los recorridos oficiales.",
         v1_k: "01 · Concepto", v1_t: "Video Conceptual", v2_k: "02 · Colección", v2_t: "The Villas", v3_k: "03 · Recorrido", v3_t: "Residencias", v4_k: "04 · Evento", v4_t: "Lanzamiento Nizuc",
-        reel_k: "Formato Vertical 9:16", reel_t: "Experiencia Conceptual", reel_cta: "Solicitar Press Kit",
+        reel_k: "Formato Vertical 9:16", reel_t: "Experiencia Conceptual", reel_cta: "Solicitar Información",
         am_eyebrow: "Más de 50 Amenidades", am_title: "Cinco pilares de hospitalidad 5 estrellas.", am_sub: "Bienestar, deporte, vida inteligente, comunidad y alta gastronomía en Mezzanine, Torre A, Torre B y Beach Club.",
         am_t1: "Wellness & Albercas", am_t2: "Fitness & Deportes", am_t3: "Smart Living", am_t4: "Community & Familia", am_t5: "Food & Rooftops", am_t6: "Beach Club Costa Mujeres",
         adv_eyebrow: "Asesoría Directa",
@@ -1364,7 +1349,7 @@
         adv_sub: "Recibe el inventario actualizado en pesos mexicanos, fichas técnicas por tipología y cotización personalizada con los descuentos vigentes.",
         ch_wa: "Teléfono / WhatsApp Directo", ch_ig: "Instagram Oficial",
         btn_wa_short: "WhatsApp", btn_ig_short: "Instagram",
-        adv_legal: "Las imágenes y cifras presentadas corresponden al material oficial del desarrollo. Disponibilidad y precios en MXN sujetos a actualización.",
+        adv_legal: "Las imágenes y cifras presentadas corresponden al inventario oficial de Torre A y Torre B. Disponibilidad y precios en MXN sujetos a actualización.",
         form_eyebrow: "Registro de Prospectos", form_title: "Solicitar Disponibilidad y Plan de Pagos",
         lbl_name: "Nombre completo", lbl_phone: "Teléfono / WhatsApp", lbl_email: "Correo electrónico", lbl_unit: "Tipología de interés", lbl_channel: "Canal preferido", opt_call: "Llamada directa", lbl_notes: "Comentarios o esquema deseado",
         form_note: "Atención directa vía @checarealestate · 998 319 8094", btn_submit: "Enviar Solicitud",
@@ -1376,23 +1361,24 @@
         hero_sub: "Hotel Living overlooking Nichupté Lagoon and Parque Cancún. Two 20-story architectural towers, over 50 five-star amenities, and a private Beach Club in Costa Mujeres.",
         hero_cta_3d: "Explore 3D Model", hero_cta_quote: "View Prices in MXN",
         m_towers: "Towers & Floors", m_am: "5-Star Amenities", m_price: "MXN · Starting at", m_disc: "80% - 20% Scheme",
-        m3d_eyebrow: "Interactive 3D Scale Model & Real Elevation",
-        m3d_title: "Explore the 3D massing and video tours floor by floor.",
-        m3d_sub: "Rotate the interactive 3D architectural model of Towers A & B or select any elevation to launch its audiovisual tour.",
-        tab_3d: "Interactive 3D Model", tab_drone: "Video Tour by Floor",
-        cap_default: "Click any floor level on the model or drag to rotate Towers A and B.",
-        m3d_btn: "Book Presentation", lvl_eyebrow: "True Elevation", lvl_title: "Select a floor level",
-        l_roof: "Rooftop Sky Lounge", l_roof_s: "Infinity Pool · 360° Panorama",
-        l_16: "Level 16 · High Residences", l_16_s: "180° Lagoon South & North",
-        l_12: "Level 12 · Mid-High", l_12_s: "180° Nichupté Lagoon",
-        l_8: "Level 8 · Residences", l_8_s: "180° Mangroves & Lagoon",
-        l_4: "Level 4 · Green Horizon", l_4_s: "Parque Cancún View",
-        l_1: "Level 1 · Villas & Garden", l_1_s: "Garden & Pool Connection",
-        lvl_cta: "View Typologies by Level",
+        m3d_eyebrow: "Real-Time Interactive 3D Experience",
+        m3d_title: "Explore the official 3D model, units, and views by level.",
+        m3d_sub: "Navigate Towers A & B freely in the official interactive 3D scale model, or select a floor level to watch its real 180° drone view.",
+        tab_hauzd: "Official 3D Model",
+        btn_full3d: "Fullscreen ↗",
+        cap_default: "Interact directly with the official 3D model: rotate 360°, zoom in, and explore Towers A and B.",
+        m3d_btn: "Book Presentation", lvl_eyebrow: "Elevation & Inventory", lvl_title: "Explore by floor level",
+        l_roof: "Rooftop Sky Lounge", l_roof_s: "Infinity Pool · 180° Drone View",
+        l_16: "Levels 14–17 · PH & Sky View", l_16_s: "From $7,470,750 to $27,303,150 MXN",
+        l_12: "Levels 10–13 · Mid-High", l_12_s: "From $6,865,975 MXN",
+        l_8: "Levels 6–9 · Residences", l_8_s: "From $6,759,250 MXN",
+        l_4: "Levels 4–5 · Green Horizon", l_4_s: "Small from $6,709,445 MXN",
+        l_1: "Levels 1–3 · Villas & Garden", l_1_s: "GH from $8,425,521 · Villas $19.14M",
+        lvl_cta: "View Full Inventory",
         arch_eyebrow: "Architecture & Vision",
         arch_title: "Contemporary nautical design facing Nichupté Lagoon.",
         arch_sub: "Developed by <strong>Naúma Development Group</strong> alongside <strong>Nautica</strong> and marketed by <strong>GMB</strong>. Clean, timeless coastal architecture crafted for views, privacy, and equity growth.",
-        p1_t: "Two 20-Story Towers", p1_d: "Typologies from 71.25 m² up to 260.03 m² Pent-Houses and the exclusive Villas Collection.",
+        p1_t: "Two 20-Story Towers", p1_d: "Typologies from 71.15 m² up to 260.03 m² Pent-Houses and the exclusive Villas Collection.",
         p2_t: "Nichupté Lagoon & Caribbean Sea Views", p2_d: "Prime orientation overlooking Nichupté Lagoon, protected mangroves, and Parque Cancún.",
         p3_t: "Private Beach Club in Isla Blanca", p3_d: "Costa Mujeres beach club with private shuttle and preferential boat and catamaran rates.",
         p4_t: "24/7 Comprehensive Security", p4_d: "Continuous CCTV monitoring, controlled gated access, and five-star hospitality.",
@@ -1403,29 +1389,47 @@
         c3_p: "Nichupté Lagoon", c3_n: "Nautical corridor & marinas.",
         c4_p: "Downtown Cancún", c4_n: "Schools, hospitals & services.",
         c5_p: "Int'l Airport", c5_n: "Fast domestic & int'l access.",
-        res_eyebrow: "Official Inventory & Typologies", res_title: "Pre-sale prices in Mexican Pesos.",
-        res_sub: "Official active figures for Tower A, Tower B, Garden House, and The Villas Collection.",
-        flt_all: "All", flt_depto: "Apartments", flt_garden: "Garden House", flt_villa: "Villas & Pent-House",
-        u1_tag: "Small · 1 Bed + Den", u1_price: "From $6,709,445 MXN",
-        u1_s1: "<strong>Total Area:</strong> 71.25 m² to 72.32 m²", u1_s2: "<strong>Layout:</strong> 1 Bedroom + Den, 1 Bath", u1_s3: "<strong>Spaces:</strong> Living/Dining, Kitchen, Laundry", u1_s4: "<strong>Outdoors:</strong> Private terrace · 1 parking",
-        u2_tag: "Garden House · L1–L3", u2_price: "From $7,500,000 MXN",
-        u2_s1: "<strong>Total Area:</strong> 94.22 m² to 158.06 m²", u2_s2: "<strong>Layout:</strong> 1 or 2 Bedrooms + Den", u2_s3: "<strong>Terraces:</strong> Outdoor areas up to 57.06 m²", u2_s4: "<strong>Parking:</strong> 1 to 2 spaces",
-        u3_tag: "Ocean Front · Lagoon View", u3_price: "From $8,425,521 MXN",
-        u3_s1: "<strong>Total Area:</strong> 93.93 m² to 134.39 m²", u3_s2: "<strong>Layout:</strong> 1 Bedroom + Den, 1 Bath", u3_s3: "<strong>Orientation:</strong> Direct Lagoon view", u3_s4: "<strong>Outdoors:</strong> Private panoramic terrace",
-        u4_tag: "Medium · 2 Bedrooms", u4_price: "From $9,040,000 MXN",
-        u4_s1: "<strong>Total Area:</strong> 107 m² to 115.67 m²", u4_s2: "<strong>Layout:</strong> 2 Bedrooms, 2 Bathrooms", u4_s3: "<strong>Spaces:</strong> Living/Dining, Kitchen, Laundry", u4_s4: "<strong>Outdoors:</strong> Private terrace · 2 parking",
-        u5_tag: "Large · 2 Bed + Den", u5_price: "From $9,360,000 MXN",
-        u5_s1: "<strong>Total Area:</strong> 112 m² to 126.09 m²", u5_s2: "<strong>Layout:</strong> 2 Bedrooms + Den", u5_s3: "<strong>Bathrooms:</strong> 2 Full Bathrooms, Laundry", u5_s4: "<strong>Outdoors:</strong> North or South terrace",
-        u6_tag: "Villas & Pent-House", u6_price: "From $17,250,000 MXN",
-        u6_s1: "<strong>Villas (V1–V4 / VA3):</strong> 211.55–275.58 m² · 3 Bed", u6_s2: "<strong>Ocean View (OV / SV):</strong> 203.29 m² from $19,794,080 MXN", u6_s3: "<strong>Pent-House (PH1 / PH2):</strong> 260.03 m² from $27,303,150 MXN", u6_s4: "<strong>Parking:</strong> Up to 3 spaces in Villas",
+        res_eyebrow: "Active Inventory · Tower A & Tower B", res_title: "Exact inventory prices in Mexican Pesos.",
+        res_sub: "Official pricing sourced directly from the active Tower A and Tower B inventory sheets in folder 3. INVENTARIO.",
+        flt_all: "All", flt_depto: "Apartments", flt_garden: "Garden House", flt_villa: "Villas, Sky View & PH",
+        u1_tag: "Small (S1) · 1 Bed + Den", u1_price: "From $6,709,445 MXN",
+        u1_s1: "<strong>Total Area:</strong> 71.15 m² to 72.32 m²",
+        u1_s2: "<strong>North Exterior (71.25 m²):</strong> From $6,709,445 MXN (L4)",
+        u1_s3: "<strong>South Interior (72.32 m²):</strong> From $6,819,776 MXN (L4)",
+        u1_s4: "<strong>Upper Levels (L14–L17):</strong> $7,470,750 to $7,593,600 MXN",
+        u3_tag: "Ocean Front · 1 Bed + Den", u3_price: "From $8,425,521 MXN",
+        u3_s1: "<strong>Total Area:</strong> 93.93 m² to 134.39 m²",
+        u3_s2: "<strong>OF1 / SF1 (93.93–94.22 m²):</strong> From $8,425,521 MXN",
+        u3_s3: "<strong>OF2 / SF2 (108.41 m²):</strong> From $9,724,377 to $9,778,562 MXN",
+        u3_s4: "<strong>OF2 Garden (134.39 m² TB):</strong> $12,054,783 MXN",
+        u2_tag: "Garden House · Levels 1–3", u2_price: "From $9,595,924 MXN",
+        u2_s1: "<strong>GH M1A (108.10–113.86 m² · 2B+Den):</strong> $9,595,924 MXN",
+        u2_s2: "<strong>GH L1 (112–113.56 m² · 2B+Den):</strong> $9,878,400 to $10,015,992 MXN",
+        u2_s3: "<strong>GH L2 / M2 (125.97–145.04 m²):</strong> $11,121,138 to $12,792,528 MXN",
+        u2_s4: "<strong>GH M3A / M3B (148.90–158.06 m²):</strong> $13,132,098 to $13,940,892 MXN",
+        u5_tag: "Large (L1 / L2) · 2 Bed + Den", u5_price: "From $9,878,400 MXN",
+        u5_s1: "<strong>Total Area:</strong> 112 m² (L1) to 126.09 m² (L2)",
+        u5_s2: "<strong>L1 North Exterior (112–113.56 m²):</strong> From $9,878,400 MXN",
+        u5_s3: "<strong>L1 Tower (L4–L17):</strong> $10,101,162 to $11,923,800 MXN",
+        u5_s4: "<strong>L2 South Interior (126.09 m²):</strong> $11,121,138 to $13,239,450 MXN",
+        u4_tag: "Medium (M) · 2 Bedrooms", u4_price: "From $10,111,712 MXN",
+        u4_s1: "<strong>Total Area:</strong> 113.26 m² to 115.67 m²",
+        u4_s2: "<strong>North Exterior (113.36 m² L4):</strong> From $10,111,712 MXN",
+        u4_s3: "<strong>South Interior (115.67 m² L10–L13):</strong> From $10,638,170 MXN",
+        u4_s4: "<strong>Upper Levels (L14–L17):</strong> $11,902,800 to $12,145,350 MXN",
+        u6_tag: "Villas, Sky View & PH · 3 Bed", u6_price: "From $19,145,275 MXN",
+        u6_s1: "<strong>Villas V4 (211.55 m²) & VEB (231.32 m²):</strong> $19,145,275 to $20,935,365 MXN",
+        u6_s2: "<strong>Villas V1 (235.56 m²) & V2 (249.21 m²):</strong> $21,318,180 to $22,555,315 MXN",
+        u6_s3: "<strong>Sky View SV (205.12 m² Lagoon):</strong> $19,794,080 to $21,537,600 MXN",
+        u6_s4: "<strong>Pent-House PH1 / PH2 (260.03 m²):</strong> $27,303,150 MXN",
         btn_quote: "Quote", btn_view: "View", btn_plan: "Plan",
-        pay_eyebrow: "Current Discount Policy", pay_title: "Simulate your payment plan in Mexican Pesos.", pay_sub: "Official commercial schemes with up to 8% discount off list price.",
-        pay_s1: "1. Reference typology", pay_s2: "2. Payment scheme",
+        pay_eyebrow: "Current Discount Policy", pay_title: "Simulate your payment plan in Mexican Pesos.", pay_sub: "Select any available unit from the official Tower A and Tower B inventory with up to 8% discount.",
+        pay_s1: "1. Available unit (Tower A / B Inventory)", pay_s2: "2. Payment scheme",
         d_0: "0% Discount", d_4: "4% Discount", d_5: "5% Discount", d_8: "8% Discount",
-        pay_sum: "Estimated MXN Breakdown", pay_list: "List Price", pay_tot: "Final Price", pay_cta: "Request this Plan",
+        pay_sum: "Exact MXN Breakdown", pay_list: "List Price", pay_tot: "Final Price", pay_cta: "Request this Plan",
         vid_eyebrow: "Official Audiovisual Archive", vid_title: "Nautica Residences in motion.", vid_sub: "Explore the conceptual films, The Villas Collection, and official tours.",
         v1_k: "01 · Concept", v1_t: "Conceptual Film", v2_k: "02 · Collection", v2_t: "The Villas", v3_k: "03 · Tour", v3_t: "Residences", v4_k: "04 · Event", v4_t: "Nizuc Launch",
-        reel_k: "Vertical Format 9:16", reel_t: "Conceptual Experience", reel_cta: "Request Press Kit",
+        reel_k: "Vertical Format 9:16", reel_t: "Conceptual Experience", reel_cta: "Request Information",
         am_eyebrow: "Over 50 Amenities", am_title: "Five pillars of 5-star hospitality.", am_sub: "Wellness, fitness, smart living, community, and dining across Mezzanine, Tower A, Tower B, and Beach Club.",
         am_t1: "Wellness & Pools", am_t2: "Fitness & Sports", am_t3: "Smart Living", am_t4: "Community & Family", am_t5: "Food & Rooftops", am_t6: "Costa Mujeres Beach Club",
         adv_eyebrow: "Direct Advisory",
@@ -1433,7 +1437,7 @@
         adv_sub: "Receive updated inventory in Mexican Pesos, technical floorplans by typology, and personalized quotes with active discounts.",
         ch_wa: "Direct Phone / WhatsApp", ch_ig: "Official Instagram",
         btn_wa_short: "WhatsApp", btn_ig_short: "Instagram",
-        adv_legal: "Images and figures correspond to official development material. Availability and MXN pricing subject to updates.",
+        adv_legal: "Images and figures correspond to the official Tower A and Tower B inventory. Availability and MXN pricing subject to updates.",
         form_eyebrow: "Lead Registration", form_title: "Request Availability & Payment Plan",
         lbl_name: "Full Name", lbl_phone: "Phone / WhatsApp", lbl_email: "Email Address", lbl_unit: "Typology of Interest", lbl_channel: "Preferred Channel", opt_call: "Direct Call", lbl_notes: "Comments or preferred scheme",
         form_note: "Direct desk via @checarealestate · 998 319 8094", btn_submit: "Send Request",
@@ -1474,118 +1478,39 @@
       }
     };
 
-    // Maqueta 3D Interactiva + Recorrido en Video (Vimeo CDN)
+    // Maqueta 3D Oficial Hauzd + Vistas Dron 180° por Nivel
     const stageViewport = document.getElementById('stageViewport');
     const stageTag = document.getElementById('stageTag');
     const stageCaption = document.getElementById('stageCaption');
-    const tab3dModel = document.getElementById('tab3dModel');
-    const tabDroneView = document.getElementById('tabDroneView');
+    const tabHauzd3d = document.getElementById('tabHauzd3d');
     const lvlItems = document.querySelectorAll('.lvl-item');
     let activeLvlIdx = 0;
-    let viewMode = '3d';
-    let rotZ = -32, rotX = 60;
+    let viewMode = 'hauzd';
 
-    function render3DStage() {
-      viewMode = '3d';
-      tab3dModel.classList.add('active');
-      tabDroneView.classList.remove('active');
-      if (EXTERNAL_3D_URL) {
-        stageViewport.innerHTML = `<iframe src="${EXTERNAL_3D_URL}" title="Maqueta 3D Nautica" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen></iframe>`;
-        return;
-      }
-      const levels = [
-        { idx: 0, lbl: 'ROOF 77m', z: '95px' },
-        { idx: 1, lbl: 'N16 · 71m', z: '77px' },
-        { idx: 2, lbl: 'N12 · 56m', z: '59px' },
-        { idx: 3, lbl: 'N8 · 42m', z: '41px' },
-        { idx: 4, lbl: 'N4 · 27m', z: '23px' },
-        { idx: 5, lbl: 'N1 · 17m', z: '6px' }
-      ];
-      const slabsHtml = (towerName) => levels.map(l =>
-        `<div class="m-slab ${l.idx === activeLvlIdx ? 'active' : ''}" data-slab="${l.idx}" style="--z:${l.z}"><span>${towerName}</span><span>${l.lbl}</span></div>`
-      ).join('');
-
-      stageViewport.innerHTML = `
-        <div class="model3d-wrap" id="modelWrap">
-          <div class="model3d-scene" id="modelScene" style="transform: rotateX(${rotX}deg) rotateZ(${rotZ}deg);">
-            <div class="m-base"></div>
-            <div class="m-tower t-a">${slabsHtml('TA')}</div>
-            <div class="m-tower t-b">${slabsHtml('TB')}</div>
-            <div class="m-lagoon">LAGUNA NICHUPTÉ · 180°</div>
-          </div>
-          <div class="m-controls-hint">
-            <span>${currentLang === 'en' ? 'Drag to rotate 3D model · Click level to inspect' : 'Arrastra para girar maqueta 3D · Clic en nivel'}</span>
-            <div class="rot-btns">
-              <button type="button" class="rot-btn" id="rotLeft">⟲</button>
-              <button type="button" class="rot-btn" id="rotRight">⟳</button>
-              <button type="button" class="rot-btn" id="openDroneFrom3d">${currentLang === 'en' ? 'Watch Video Tour' : 'Ver Recorrido en Video'}</button>
-            </div>
-          </div>
-        </div>
-      `;
-
-      const scene = document.getElementById('modelScene');
-      const wrap = document.getElementById('modelWrap');
-      let dragging = false, startX = 0, startY = 0;
-      wrap.addEventListener('pointerdown', (e) => {
-        if (e.target.closest('button') || e.target.closest('.m-slab')) return;
-        dragging = true; startX = e.clientX; startY = e.clientY;
-      });
-      window.addEventListener('pointermove', (e) => {
-        if (!dragging) return;
-        rotZ += (e.clientX - startX) * 0.35;
-        rotX = Math.max(35, Math.min(75, rotX - (e.clientY - startY) * 0.25));
-        startX = e.clientX; startY = e.clientY;
-        if (scene) scene.style.transform = `rotateX(${rotX}deg) rotateZ(${rotZ}deg)`;
-      });
-      window.addEventListener('pointerup', () => { dragging = false; });
-
-      document.getElementById('rotLeft').addEventListener('click', () => {
-        rotZ -= 25; scene.style.transform = `rotateX(${rotX}deg) rotateZ(${rotZ}deg)`;
-      });
-      document.getElementById('rotRight').addEventListener('click', () => {
-        rotZ += 25; scene.style.transform = `rotateX(${rotX}deg) rotateZ(${rotZ}deg)`;
-      });
-      document.getElementById('openDroneFrom3d').addEventListener('click', () => {
-        renderDroneStage(activeLvlIdx);
-      });
-      stageViewport.querySelectorAll('.m-slab').forEach(slab => {
-        slab.addEventListener('click', () => {
-          selectLevel(Number(slab.dataset.slab), false);
-        });
-      });
+    function renderHauzdStage() {
+      viewMode = 'hauzd';
+      tabHauzd3d.classList.add('active');
+      lvlItems.forEach(b => b.classList.remove('active'));
+      stageViewport.innerHTML = `<iframe src="${HAUZD_3D_URL}" title="Maqueta 3D Oficial Nautica Residences" allow="autoplay; fullscreen; xr-spatial-tracking; accelerometer; gyroscope" allowfullscreen></iframe>`;
+      stageTag.textContent = 'MAQUETA 3D · HAUZD';
+      stageCaption.textContent = i18n[currentLang].cap_default;
     }
 
-    function renderDroneStage(idx) {
+    function selectLevel(idx) {
       viewMode = 'drone';
-      tabDroneView.classList.add('active');
-      tab3dModel.classList.remove('active');
-      const btn = lvlItems[idx];
-      stageViewport.innerHTML = `<iframe src="${btn.dataset.src}" title="Recorrido Nautica Residences" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>`;
-      stageTag.textContent = btn.dataset.tag;
-      stageCaption.textContent = btn.dataset[currentLang];
-    }
-
-    function selectLevel(idx, switchToDrone) {
       activeLvlIdx = idx;
+      tabHauzd3d.classList.remove('active');
       lvlItems.forEach((b, i) => b.classList.toggle('active', i === idx));
       const btn = lvlItems[idx];
+      stageViewport.innerHTML = `<iframe src="${btn.dataset.src}" title="Vista Dron 180° Nautica Residences" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>`;
       stageTag.textContent = btn.dataset.tag;
       stageCaption.textContent = btn.dataset[currentLang];
-      if (switchToDrone || viewMode === 'drone') {
-        renderDroneStage(idx);
-      } else {
-        stageViewport.querySelectorAll('.m-slab').forEach(s => {
-          s.classList.toggle('active', Number(s.dataset.slab) === idx);
-        });
-      }
     }
 
     lvlItems.forEach((btn, idx) => {
-      btn.addEventListener('click', () => selectLevel(idx, true));
+      btn.addEventListener('click', () => selectLevel(idx));
     });
-    tab3dModel.addEventListener('click', render3DStage);
-    tabDroneView.addEventListener('click', () => renderDroneStage(activeLvlIdx));
+    tabHauzd3d.addEventListener('click', renderHauzdStage);
 
     // Amenidades
     let activePillar = 'wellness';
@@ -1677,8 +1602,7 @@
       document.getElementById('notes').placeholder = lang === 'en' ? 'Indicate tower, floor, or payment scheme' : 'Indica torre, nivel o plan de pago de interés';
       renderAmenity(activePillar);
       updateCalc();
-      if (viewMode === '3d') render3DStage();
-      else stageCaption.textContent = lvlItems[activeLvlIdx].dataset[lang];
+      if (viewMode === 'drone') stageCaption.textContent = lvlItems[activeLvlIdx].dataset[lang];
     }
     document.querySelectorAll('.lang-btn').forEach(btn => {
       btn.addEventListener('click', () => {
